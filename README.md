@@ -1,0 +1,54 @@
+# Banking Application CI/CD Automation using Jenkins & Kubernetes
+
+## Project Overview
+Designed and implemented an end-to-end CI/CD pipeline for a Banking
+application to automate build, containerization, image publishing,
+and deployment on a Kubernetes cluster running on AWS EC2 instances.
+
+## Tools & Technologies
+- AWS EC2
+- Ansible
+- Jenkins
+- Docker & DockerHub
+- Kubernetes (kubeadm)
+- Git & GitHub
+- Linux (Ubuntu)
+
+## Architecture
+GitHub → Jenkins → Docker → DockerHub → Kubernetes (Master & Worker) → Banking App
+
+(Add architecture diagram image here)
+
+## CI/CD Workflow
+1. Developer commits code to GitHub
+2. Jenkins pipeline triggers automatically
+3. Maven builds the banking application
+4. Docker image is created and pushed to DockerHub
+5. Kubernetes deploys the application using Deployment & Service YAML
+6. Application is exposed using NodePort service
+
+## Key Responsibilities
+- Launched AWS EC2 instances for Kubernetes master and worker nodes
+- Automated installation of Jenkins, Docker, Java, and Maven using Ansible
+- Created Jenkins pipeline with multiple CI/CD stages
+- Built and pushed Docker images to DockerHub
+- Deployed banking application on Kubernetes cluster
+- Validated deployment using kubectl commands
+
+## Jenkins Pipeline Stages
+- Git Checkout
+- Build Application (Maven)
+- Docker Image Build
+- Docker Image Push
+- Kubernetes Deployment
+
+## Kubernetes Resources Used
+- Deployment
+- Service (NodePort)
+
+## Outcome
+- Fully automated CI/CD pipeline
+- Reduced manual deployment effort
+- Successfully deployed banking application on Kubernetes
+- Application accessible via browser using NodePort
+# financeme-devops-ci-cd
